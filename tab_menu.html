@@ -37,6 +37,8 @@
             justify-content: center;
             align-items: center;
             background-color: lightblue;
+            cursor: pointer;
+            /* =>마우스 모양을 손가락 모양으로 변경해줌 */
         }
 
         .con_wrap{
@@ -47,7 +49,7 @@
         .con{
             width: 100%;
             height: 100%;
-            background-color: turquoise;
+            background-color: gray;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -82,6 +84,18 @@
 
         /* 2.클릭했을때 버튼 색상 변경 */
 
+        #tab_1:checked~.btn_wrap .btn_1{
+            background-color: gray;
+        }
+
+        #tab_2:checked~.btn_wrap .btn_2{
+            background-color: gray;
+        }
+
+        #tab_3:checked~.btn_wrap .btn_3{
+            background-color: gray;
+        }
+
     </style>
 
 </head>
@@ -89,7 +103,7 @@
 
     <div class="wrap">
 
-        <input type="radio" name="tab" id="tab_1">
+        <input type="radio" name="tab" id="tab_1" checked>
         <input type="radio" name="tab" id="tab_2">
         <input type="radio" name="tab" id="tab_3">
         <div class="btn_wrap">
