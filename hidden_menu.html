@@ -12,6 +12,69 @@
             padding: 0;
         }
 
+        body{
+            overflow: hidden;
+            /* overflow-x: ;
+            =>가로축 스크롤
+            overflow-y: ;
+            =>세로축 스크롤 */
+        }
+
+        li{
+            list-style: none;
+        }
+
+        header{
+            width: 100%;
+            height: 60px;
+            background-color: lightgray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            box-sizing: border-box;
+            
+        }
+
+        input{
+            display: none;
+        }
+
+        .menu_btn{
+            font-size: 30px;
+            cursor: pointer;
+            position: relative;
+            z-index: 9;
+        }
+
+        section{
+            height: 500px;
+            background-color: lightsalmon;
+        }
+
+        .menu_wrap{
+            width: 100%;
+            height: 700px;
+            background-color: beige;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            font-size: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.8s;
+        }
+
+        .menu_wrap li{
+            margin-bottom: 50px;
+        }
+
+        #menu_input:checked~.menu_wrap{
+            left: 0;
+        }
+
     </style>
 
 </head>
@@ -21,7 +84,14 @@
         <header>
             <div class="logo">LOGO</div>
             <input type="checkbox" id="menu_input">
-            <label class="menu" for="menu_input">=</label>
+            <label class="menu_btn" for="menu_input">=</label>
+            <ul class="menu_wrap">
+                <li>menu</li>
+                <li>menu</li>
+                <li>menu</li>
+                <li>menu</li>
+            </ul>
+            
         </header>
         
         <section>Section</section>
